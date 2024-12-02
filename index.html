@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="About the country new zealand" />
+    <meta
+      name="description"
+      content="about CSS custom properties what it is and how to use it."
+    />
     <link rel="stylesheet" href="styles/styles.css" />
     <title>CSS Custom Properties</title>
   </head>
@@ -11,33 +14,192 @@
     <a id="skip" href="#site-main">Skip to content</a>
     <header>
       <nav>
+        <img
+          src="images/function-logo.svg"
+          alt="logo f of x function to represent the variable function of custom properties"
+        />
         <ul>
-          <li><a href="">What is it</a></li>
-          <li><a href="">What does it do</a></li>
-          <li><a href="">Why-use-it</a></li>
-          <li><a href="">Where would you use it</a></li>
-          <li><a href="">References</a></li>
+          <li><a href="#what-is-it">What is it</a></li>
+          <li><a href="#what-does-it-do">What does it do</a></li>
+          <li><a href="#why-use-it">Why-use-it</a></li>
+          <li><a href="#where-would-you-use-it">Where would you use it</a></li>
+          <li><a href="#references">References</a></li>
         </ul>
       </nav>
     </header>
     <main id="site-main">
       <h1>CSS Custom Properties</h1>
+      <p>
+        A powerful easy to use tool to change your CSS workflow for the better.
+      </p>
+      <picture>
+        <!-- /* spell-checker: disable */ -->
+        <source
+          media="(max-width: 767px)"
+          sizes="(max-width: 767px) 100vw, 767px"
+          srcset="
+            images/variable-cloud_h1ioyf_ar_1_1,c_fill,g_auto__c_scale,w_200.png 200w,
+            images/variable-cloud_h1ioyf_ar_1_1,c_fill,g_auto__c_scale,w_463.png 463w,
+            images/variable-cloud_h1ioyf_ar_1_1,c_fill,g_auto__c_scale,w_767.png 767w
+          "
+        />
+        <source
+          media="(min-width: 768px) and (max-width: 991px)"
+          sizes="(max-width: 991px) 70vw, 694px"
+          srcset="
+            images/variable-cloud_h1ioyf_ar_4_3,c_fill,g_auto__c_scale,w_538.png 538w,
+            images/variable-cloud_h1ioyf_ar_4_3,c_fill,g_auto__c_scale,w_694.png 694w
+          "
+        />
+        <source
+          media="(min-width: 992px) and (max-width: 1199px)"
+          sizes="(max-width: 1200px) 60vw, 720px"
+          srcset="
+            images/variable-cloud_h1ioyf_ar_16_9,c_fill,g_auto__c_scale,w_596.png 596w,
+            images/variable-cloud_h1ioyf_ar_16_9,c_fill,g_auto__c_scale,w_720.png 720w
+          "
+        />
+        <img
+          sizes="(max-width: 3500px) 40vw, 1400px"
+          srcset="
+            images/variable-cloud_h1ioyf_c_scale,w_480.png   480w,
+            images/variable-cloud_h1ioyf_c_scale,w_893.png   893w,
+            images/variable-cloud_h1ioyf_c_scale,w_1400.png 1400w
+          "
+          src="images/variable-cloud_h1ioyf_c_scale,w_1400.png"
+          alt="A cloud of common variables names and use casses"
+        />
+      </picture>
+      <!-- /* spell-checker: enable */ -->
       <section id="what-is-it">
         <h2>What is it?</h2>
+        <p>Custom variables store values</p>
       </section>
       <section id="what-does-it-do">
         <h2>What does it do?</h2>
       </section>
       <section id="why-use-it">
         <h2>Why use it?</h2>
+        <h3>Should I use it?</h3>
+        <p>
+          Yes, browser availability is very high at 97.75% as shown on Can I Use
+          webpage:
+          <a href=" https://caniuse.com/?search=custom%20properties"
+            >Can I Use</a
+          >
+        </p>
+        <h3>Maintainability</h3>
+        <p>
+          CSS custom properties creates projects that are easy to change and/or
+          maintain since values can be changed in one place at the root. That
+          value will then be replaced in all locations that the specified
+          variable is. Imagine changing the color scheme part way through the
+          project and having to find and replace each color. With variables you
+          would only have to change them into the specified variables at the
+          root. Which greatly reduces the risk of errors and increases the speed
+          to make changes. Since developers won’t have to look through a large
+          code base to find what they are looking for.
+        </p>
+        <img
+          src="images/Colors.png"
+          alt="code of custom properties in the root and body of the code file"
+        />
+        <h3>Readability</h3>
+        <p>
+          While initially it will take more planning to create a naming scheme,
+          this ability to have specific naming schemes can create code that is
+          easy to read and understand. For example, font size 3xs, 2xs, small,
+          medium, large, extra-large would be easier to read then font size: 1
+          rem, font size: 1.5 rem etc.. This provides much more meaning and
+          makes it easier to know where each value goes. Custom variables also
+          enhance collaboration among team members due them being easy to
+          understand. This also allows new team members to understand the code
+          easier with large documentation needed.
+        </p>
+        <h3>Scalability</h3>
+        <p>
+          There are several reasons why CSS custom properties make a project
+          more scalable. First, is the consistency they provide throughout the
+          code as the same variable can be reused in multiple places. Secondly,
+          custom properties provide reduced redundancy by minimizing the need
+          for repetitive code, which allows for cleaner and easier to maintain
+          code. Lastly, CSS variables can also be defined in selectors other
+          than the root allowing for localized changes without affecting the
+          rest of the code.
+        </p>
       </section>
       <section id="where-would-you-use-it">
         <h2>Where would you use it?</h2>
       </section>
       <section id="references">
+        <!-- /* spell-checker: disable */ -->
         <h2>References</h2>
+        <p>
+          CSS Custom Properties Guide by Chris Coyier
+          <a
+            href="https://css-tricks.com/a-complete-guide-to-custom-properties/"
+            >CSS-Tricks</a
+          >
+        </p>
+        <p>
+          MDN Web Docs by MDN Contributors
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+            >MDN Web Docs</a
+          >
+        </p>
+
+        <p>
+          A Strategy Guide To CSS Custom Properties by Michael Riethmuller
+          <a
+            href="https://www.smashingmagazine.com/2018/05/css-custom-properties-strategy-guide/"
+            >Smashing Magazine</a
+          >
+        </p>
+        <h3>Further Reading</h3>
+        <p>
+          Get a CSS Custom Property value wit JavaScript by Andy Bell
+          <a
+            href="https://piccalil.li/blog/get-css-custom-property-value-with-javascript/"
+            >Piccalilli</a
+          >
+        </p>
+        <p>
+          CSS Custom Properties In The Cascade by Miriam Suzanne
+          <a
+            href="https://www.smashingmagazine.com/2019/07/css-custom-properties-cascade/"
+            >Smashing Magazine</a
+          >
+        </p>
+        <p>
+          It’s Time To Start Using CSS Custom Properties by Serg Hospodarets<a
+            href="https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/"
+            >Smasing Magazine</a
+          >
+        </p>
+        <h3>Prefer videos? some options:</h3>
+        <p>
+          CSS Custom Properties Playlist by Kevin Powell
+          <a
+            href="https://www.youtube.com/watch?v=PHO6TBq_auI&list=PL4-IK0AVhVjOT2KBB5TSbD77OmfHvtqUi "
+            >Youtube</a
+          >
+        </p>
+        <p>
+          Learn CSS Variables In 7 Minutes by Slaying The Dragon
+          <a href="https://youtu.be/5wLrz_zUwoU?si=xCrTpd__gdbfo2Vi">Youtube</a>
+        </p>
+        <p>
+          SASS Tutorial (build you own CSS libary) - variables by Net Ninja
+          <a href="https://youtu.be/LXx_oE6IBWs?si=bpxChW9lyccs5Q2W">Youtube</a>
+        </p>
+        <!-- /* spell-checker: enable */ -->
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <p>
+        © By | Brandon | Kelly | Harrison | Milad | For educational purposes
+      </p>
+    </footer>
   </body>
 </html>
