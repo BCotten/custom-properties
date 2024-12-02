@@ -11,7 +11,7 @@
   --fs-large: 1.4rem;
   --fs-extra-large: 1.7rem;
   --fs-2xl: 2rem;
-  --fs-3xl: 2.5rem;
+  --fs-3xl: 3rem;
 
   // Margin and Padding space
   --space-3xs: 0.25rem;
@@ -25,6 +25,15 @@
   --space-3xl: 6rem;
 
   // Font weights
+  --fw-xs: 200;
+  --fw-s: 400;
+  --fw-m: 700;
+  --fw-l: 900;
 
   // Colors
+  --clr-text: #040a0e;
+  --clr-background: #f2f8fb;
+  --clr-primary: #439cc7;
+  --clr-secondary: #c995df;
+  --clr-accent: #d573ce;
 }
