@@ -1,9 +1,12 @@
-@use "variables";
+@use "variables" as *;
+@use "mixins" as *;
 // Global css here
 
 body {
   font-family: var(--fs-base);
-  font-size: var(--fs-small, 1rem);
+  font-size: var(--fs-small);
+  background-color: var(--clr-background);
+  color: var(--clr-text);
   margin: 0;
 }
 
@@ -18,23 +21,25 @@ h6 {
 }
 
 h1 {
-  font-size: var(--fs-3xl, 2.5rem);
-  margin: 0;
-  z-index: 1;
-  position: relative;
+  font-size: var(--fs-3xl);
   padding-top: var(--space-l);
 }
 
 h2 {
-  font-size: var(--fs-2xl, 2rem);
+  font-size: var(--fs-2xl);
 }
 
 h3 {
-  font-size: var(--fs-extra-large, 1.7rem);
+  font-size: var(--fs-extra-large);
 }
 
 p {
   padding-inline: var(--space-s);
   max-width: 75ch;
   line-height: 1.5;
+}
+
+main {
+  @include wrapper;
+  @include margin-center;
 }
