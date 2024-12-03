@@ -1,0 +1,18 @@
+@use "variables" as *;
+
+@mixin margin-center {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin flex-row-wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+@mixin wrapper {
+  max-width: 100rem;
+}
