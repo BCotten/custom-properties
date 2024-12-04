@@ -36,108 +36,191 @@
       </nav>
     </header>
     <main id="site-main">
-      <h1>CSS Custom Properties</h1>
-      <p>
-        A powerful easy to use tool to change your CSS workflow for the better.
-      </p>
-      <picture>
-        <!-- /* spell-checker: disable */ -->
-        <source
-          media="(max-width: 767px)"
-          sizes="(max-width: 767px) 100vw, 767px"
-          srcset="
-            images/variable-cloud_h1ioyf_ar_1_1,c_fill,g_auto__c_scale,w_200.png 200w,
-            images/variable-cloud_h1ioyf_ar_1_1,c_fill,g_auto__c_scale,w_463.png 463w,
-            images/variable-cloud_h1ioyf_ar_1_1,c_fill,g_auto__c_scale,w_767.png 767w
-          "
-        />
-        <source
-          media="(min-width: 768px) and (max-width: 991px)"
-          sizes="(max-width: 991px) 70vw, 694px"
-          srcset="
-            images/variable-cloud_h1ioyf_ar_4_3,c_fill,g_auto__c_scale,w_538.png 538w,
-            images/variable-cloud_h1ioyf_ar_4_3,c_fill,g_auto__c_scale,w_694.png 694w
-          "
-        />
-        <source
-          media="(min-width: 992px) and (max-width: 1199px)"
-          sizes="(max-width: 1200px) 60vw, 720px"
-          srcset="
-            images/variable-cloud_h1ioyf_ar_16_9,c_fill,g_auto__c_scale,w_596.png 596w,
-            images/variable-cloud_h1ioyf_ar_16_9,c_fill,g_auto__c_scale,w_720.png 720w
-          "
-        />
-        <img
-          sizes="(max-width: 3500px) 40vw, 1400px"
-          srcset="
-            images/variable-cloud_h1ioyf_c_scale,w_480.png   480w,
-            images/variable-cloud_h1ioyf_c_scale,w_893.png   893w,
-            images/variable-cloud_h1ioyf_c_scale,w_1400.png 1400w
-          "
-          src="images/variable-cloud_h1ioyf_c_scale,w_1400.png"
-          alt="A cloud of common variables names and use casses"
-        />
-      </picture>
-      <!-- /* spell-checker: enable */ -->
+      <section class="hero">
+        <h1>CSS Custom Properties</h1>
+        <h3>
+          A powerful easy to use tool to change your CSS workflow for the
+          better.
+        </h3>
+        <picture>
+          <!-- /* spell-checker: disable */ -->
+          <source
+            media="(max-width: 767px)"
+            sizes="(max-width: 767px) 100vw, 767px"
+            srcset="
+              images/variable-cloud_h1ioyf_ar_1_1,c_fill,g_auto__c_scale,w_200.png 200w,
+              images/variable-cloud_h1ioyf_ar_1_1,c_fill,g_auto__c_scale,w_463.png 463w,
+              images/variable-cloud_h1ioyf_ar_1_1,c_fill,g_auto__c_scale,w_767.png 767w
+            "
+          />
+          <source
+            media="(min-width: 768px) and (max-width: 991px)"
+            sizes="(max-width: 991px) 70vw, 694px"
+            srcset="
+              images/variable-cloud_h1ioyf_ar_4_3,c_fill,g_auto__c_scale,w_538.png 538w,
+              images/variable-cloud_h1ioyf_ar_4_3,c_fill,g_auto__c_scale,w_694.png 694w
+            "
+          />
+          <source
+            media="(min-width: 992px) and (max-width: 1199px)"
+            sizes="(max-width: 1200px) 60vw, 720px"
+            srcset="
+              images/variable-cloud_h1ioyf_ar_16_9,c_fill,g_auto__c_scale,w_596.png 596w,
+              images/variable-cloud_h1ioyf_ar_16_9,c_fill,g_auto__c_scale,w_720.png 720w
+            "
+          />
+          <img
+            sizes="(max-width: 3500px) 40vw, 1400px"
+            srcset="
+              images/variable-cloud_h1ioyf_c_scale,w_480.png   480w,
+              images/variable-cloud_h1ioyf_c_scale,w_893.png   893w,
+              images/variable-cloud_h1ioyf_c_scale,w_1400.png 1400w
+            "
+            src="images/variable-cloud_h1ioyf_c_scale,w_1400.png"
+            alt="A cloud of common variables names and use casses"
+          />
+        </picture>
+        <!-- /* spell-checker: enable */ -->
+      </section>
       <section id="what-is-it">
         <h2>What is it?</h2>
-        <p>Custom variables store values</p>
+        <article>
+          <h3>Introduction</h3>
+          <p>
+            CSS custom properties are also known as CSS variables or Cascading
+            variables. They may even be more commonly known as custom variables.
+            These properties (or variables) allow developers to define variables
+            in one place within a CSS document and then efficiently reuse them
+            throughout their CSS Code. The reason you must define your variable
+            is because your browser won’t recognize your variable or what it is
+            for until you do so.
+          </p>
+        </article>
+        <article>
+          <h3>Definition and Scope</h3>
+          <p>
+            The property/variable names that you define are case-sensitive and
+            are prefixed with two dashes. The properties represent specific,
+            customized properties that “contain a value that can be
+            used/accessed in other declarations using the var() function.” Ex:
+            var(---primary-color) CSS properties can be locally or globally
+            scoped. It is more common and perhaps, more useful to globally
+            scope. To do this, you declare your variable inside the :root
+            selector as it provides more specificity than your document’s html
+            element.
+          </p>
+        </article>
+        <article>
+          <h3>Local Scope</h3>
+          <p>
+            To locally scope, declare your variable inside the selector that
+            will make use of it. Custom properties are scoped to the element(s)
+            they are declared in and are also affected by the cascade. Locally
+            scoped variables will only apply to the selector in which it is
+            declared. If you were to place that variable in another element
+            where it has not been defined, the browser won’t recognize it.
+            Fortunately, this won’t result in an error. The browser will just
+            ignore it. These properties can be applied to all elements, however,
+            and they can be inherited.
+          </p>
+        </article>
+        <article>
+          <h3>Browser Fallbacks</h3>
+          <p>
+            Although CSS Custom Properties are 97.73% supported across browsers,
+            they are not supported by Internet Explorer. Opera is hit-or-miss
+            depending on which version. In this case, it’s still important to
+            provide browser fallbacks in your CSS code. This will look similar
+            to providing fallback fonts. Example:
+          </p>
+          <div class="code">
+            <code> h1 { color : var(--header-color, blue) } </code>
+          </div>
+          <p>
+            Advanced users can use Sass Maps above their :root variables as a
+            more efficient workaround.
+          </p>
+        </article>
       </section>
       <section id="what-does-it-do">
         <h2>What does it do?</h2>
+        <article>
+          <h3></h3>
+          <p></p>
+        </article>
+        <article>
+          <h3></h3>
+          <p></p>
+        </article>
       </section>
       <section id="why-use-it">
         <h2>Why use it?</h2>
-        <h3>Should I use it?</h3>
-        <p>
-          Yes, browser availability is very high at 97.75% as shown on Can I Use
-          webpage:
-          <a href=" https://caniuse.com/?search=custom%20properties"
-            >Can I Use</a
-          >
-        </p>
-        <h3>Maintainability</h3>
-        <p>
-          CSS custom properties creates projects that are easy to change and/or
-          maintain since values can be changed in one place at the root. That
-          value will then be replaced in all locations that the specified
-          variable is. Imagine changing the color scheme part way through the
-          project and having to find and replace each color. With variables you
-          would only have to change them into the specified variables at the
-          root. Which greatly reduces the risk of errors and increases the speed
-          to make changes. Since developers won’t have to look through a large
-          code base to find what they are looking for.
-        </p>
-        <img
-          src="images/Colors.png"
-          alt="code of custom properties in the root and body of the code file"
-        />
-        <h3>Readability</h3>
-        <p>
-          While initially it will take more planning to create a naming scheme,
-          this ability to have specific naming schemes can create code that is
-          easy to read and understand. For example, font size 3xs, 2xs, small,
-          medium, large, extra-large would be easier to read then font size: 1
-          rem, font size: 1.5 rem etc.. This provides much more meaning and
-          makes it easier to know where each value goes. Custom variables also
-          enhance collaboration among team members due them being easy to
-          understand. This also allows new team members to understand the code
-          easier with large documentation needed.
-        </p>
-        <h3>Scalability</h3>
-        <p>
-          There are several reasons why CSS custom properties make a project
-          more scalable. First, is the consistency they provide throughout the
-          code as the same variable can be reused in multiple places. Secondly,
-          custom properties provide reduced redundancy by minimizing the need
-          for repetitive code, which allows for cleaner and easier to maintain
-          code. Lastly, CSS variables can also be defined in selectors other
-          than the root allowing for localized changes without affecting the
-          rest of the code.
-        </p>
+        <article>
+          <h3>Should I use it?</h3>
+          <p>
+            Yes, browser availability is very high at 97.75% as shown on Can I
+            Use webpage:
+            <a href=" https://caniuse.com/?search=custom%20properties"
+              >Can I Use</a
+            >
+          </p>
+        </article>
+        <article>
+          <h3>Maintainability</h3>
+          <p>
+            CSS custom properties creates projects that are easy to change
+            and/or maintain since values can be changed in one place at the
+            root. That value will then be replaced in all locations that the
+            specified variable is. Imagine changing the color scheme part way
+            through the project and having to find and replace each color. With
+            variables you would only have to change them into the specified
+            variables at the root. Which greatly reduces the risk of errors and
+            increases the speed to make changes. Since developers won’t have to
+            look through a large code base to find what they are looking for.
+          </p>
+          <img
+            src="images/Colors.png"
+            alt="code of custom properties in the root and body of the code file"
+          />
+        </article>
+        <article>
+          <h3>Readability</h3>
+          <p>
+            While initially it will take more planning to create a naming
+            scheme, this ability to have specific naming schemes can create code
+            that is easy to read and understand. For example, font size 3xs,
+            2xs, small, medium, large, extra-large would be easier to read then
+            font size: 1 rem, font size: 1.5 rem etc.. This provides much more
+            meaning and makes it easier to know where each value goes. Custom
+            variables also enhance collaboration among team members due them
+            being easy to understand. This also allows new team members to
+            understand the code easier with large documentation needed.
+          </p>
+        </article>
+        <article>
+          <h3>Scalability</h3>
+          <p>
+            There are several reasons why CSS custom properties make a project
+            more scalable. First, is the consistency they provide throughout the
+            code as the same variable can be reused in multiple places.
+            Secondly, custom properties provide reduced redundancy by minimizing
+            the need for repetitive code, which allows for cleaner and easier to
+            maintain code. Lastly, CSS variables can also be defined in
+            selectors other than the root allowing for localized changes without
+            affecting the rest of the code.
+          </p>
+        </article>
       </section>
       <section id="where-would-you-use-it">
         <h2>Where would you use it?</h2>
+        <article>
+          <h3>Theming</h3>
+          <p></p>
+        </article>
+        <article>
+          <h3>Responsive Design</h3>
+          <p></p>
+        </article>
       </section>
       <section id="references">
         <!-- /* spell-checker: disable */ -->

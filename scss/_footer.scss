@@ -4,4 +4,6 @@
 footer {
   @include wrapper;
   @include margin-center;
+  max-width: 80rem;
+  padding-top: var(--space-2xl);
 }
