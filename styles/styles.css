@@ -444,16 +444,30 @@ p {
 
 main {
   max-width: 100rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 0 auto;
 }
 
+@media (min-width: 26.25em) {
+  :root {
+    --fs-3xl: 4rem;
+    --fs-2xl: 2.5rem;
+    --fs-extra-large: 2rem;
+    --fs-small: 1.1rem;
+  }
+}
+@media (min-width: 64em) {
+  :root {
+    --fs-3xl: 4.5rem;
+    --fs-2xl: 3rem;
+    --fs-extra-large: 2.5rem;
+    --fs-small: 1.3rem;
+  }
+}
 nav {
   display: flex;
   flex-wrap: wrap;
   max-width: 100rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 0 auto;
   padding-inline: var(--space-s);
   justify-content: space-between;
   align-items: center;
@@ -483,10 +497,25 @@ nav a:focus {
   background-color: var(--clr-secondary);
 }
 
+.code {
+  margin-inline: var(--space-s);
+}
+
+section {
+  margin: 0 auto 0 auto;
+  max-width: 80rem;
+}
+
+@media (min-width: 64em) {
+  img {
+    max-width: 50rem;
+  }
+}
 footer {
   max-width: 100rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 0 auto;
+  max-width: 80rem;
+  padding-top: var(--space-2xl);
 }
 
 /*# sourceMappingURL=styles.css.map */

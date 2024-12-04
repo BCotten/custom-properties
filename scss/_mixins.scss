@@ -1,10 +1,7 @@
 @use "variables" as *;
 
 @mixin margin-center {
-  margin: {
-    left: auto;
-    right: auto;
-  }
+  margin: 0 auto 0 auto;
 }
 
 @mixin flex-row-wrap {

@@ -1,1 +1,17 @@
 @use "variables" as *;
+@use "mixins" as *;
+
+.code {
+  margin-inline: var(--space-s);
+}
+
+section {
+  @include margin-center;
+  max-width: 80rem;
+}
+
+@media (min-width: 64em) {
+  img {
+    max-width: 50rem;
+  }
+}

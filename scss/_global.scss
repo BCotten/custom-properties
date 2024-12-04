@@ -43,3 +43,21 @@ main {
   @include wrapper;
   @include margin-center;
 }
+
+@media (min-width: 26.25em) {
+  :root {
+    --fs-3xl: 4rem;
+    --fs-2xl: 2.5rem;
+    --fs-extra-large: 2rem;
+    --fs-small: 1.1rem;
+  }
+}
+
+@media (min-width: 64em) {
+  :root {
+    --fs-3xl: 4.5rem;
+    --fs-2xl: 3rem;
+    --fs-extra-large: 2.5rem;
+    --fs-small: 1.3rem;
+  }
+}
