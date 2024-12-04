@@ -8,6 +8,7 @@ nav {
   padding-inline: var(--space-s);
   justify-content: space-between;
   align-items: center;
+  max-width: 42rem;
 
   img {
     max-width: 6.25rem;
@@ -37,4 +38,10 @@ nav {
     background-color: var(--clr-secondary);
   }
 
+}
+
+@media (min-width: 64em) {
+  nav {
+    max-width: 60rem;
+  }
 }
