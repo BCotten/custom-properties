@@ -5,13 +5,21 @@
   margin-inline: var(--space-s);
 }
 
+img {
+  max-width: 35rem;
+}
+
 section {
   @include margin-center;
-  max-width: 80rem;
+  max-width: 42rem;
 }
 
 @media (min-width: 64em) {
   img {
     max-width: 50rem;
+  }
+
+  section {
+    max-width: 60rem;
   }
 }

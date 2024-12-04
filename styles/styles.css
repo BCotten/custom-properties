@@ -471,6 +471,7 @@ nav {
   padding-inline: var(--space-s);
   justify-content: space-between;
   align-items: center;
+  max-width: 42rem;
 }
 nav img {
   max-width: 6.25rem;
@@ -497,25 +498,48 @@ nav a:focus {
   background-color: var(--clr-secondary);
 }
 
+@media (min-width: 64em) {
+  nav {
+    max-width: 60rem;
+  }
+}
+.picture {
+  margin: 0 auto 0 auto;
+  max-width: fit-content;
+}
+
 .code {
   margin-inline: var(--space-s);
 }
 
+img {
+  max-width: 35rem;
+}
+
 section {
   margin: 0 auto 0 auto;
-  max-width: 80rem;
+  max-width: 42rem;
 }
 
 @media (min-width: 64em) {
   img {
     max-width: 50rem;
   }
+  section {
+    max-width: 60rem;
+  }
 }
 footer {
   max-width: 100rem;
   margin: 0 auto 0 auto;
-  max-width: 80rem;
+  max-width: 42rem;
   padding-top: var(--space-2xl);
+}
+
+@media (min-width: 64em) {
+  footer {
+    max-width: 60rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
