@@ -28,7 +28,6 @@
         />
         <ul>
           <li><a href="#what-is-it">What is it</a></li>
-          <li><a href="#what-does-it-do">What does it do</a></li>
           <li><a href="#why-use-it">Why-use-it</a></li>
           <li><a href="#where-would-you-use-it">Where would you use it</a></li>
           <li><a href="#references">References</a></li>
@@ -87,7 +86,7 @@
             in one place within a CSS document and then efficiently reuse them
             throughout their CSS Code. The reason you must define your variable
             is because your browser won’t recognize your variable or what it is
-            for until you do so.
+            until you do so.
           </p>
         </article>
         <article>
@@ -97,7 +96,7 @@
             are prefixed with two dashes. The properties represent specific,
             customized properties that “contain a value that can be
             used/accessed in other declarations using the var() function.” Ex:
-            var(---primary-color) CSS properties can be locally or globally
+            var(--primary-color) CSS properties can be locally or globally
             scoped. It is more common and perhaps, more useful to globally
             scope. To do this, you declare your variable inside the :root
             selector as it provides more specificity than your document’s html
@@ -117,6 +116,10 @@
             ignore it. These properties can be applied to all elements, however,
             and they can be inherited.
           </p>
+          <img
+            src="images/root-scope_vs_local-scope.png"
+            alt="A code snippet comparing root variable and local variables"
+          />
         </article>
         <article>
           <h3>Browser Fallbacks</h3>
@@ -134,17 +137,6 @@
             Advanced users can use Sass Maps above their :root variables as a
             more efficient workaround.
           </p>
-        </article>
-      </section>
-      <section id="what-does-it-do">
-        <h2>What does it do?</h2>
-        <article>
-          <h3></h3>
-          <p></p>
-        </article>
-        <article>
-          <h3></h3>
-          <p></p>
         </article>
       </section>
       <section id="why-use-it">
@@ -209,11 +201,49 @@
         <h2>Where would you use it?</h2>
         <article>
           <h3>Theming</h3>
-          <p></p>
+          <p>
+            A great use case for custom properties is theming whether for
+            light/dark mode or other color theme sets. Since all you have to do
+            is declare your colors in the root. Then using those same colors and
+            names in a data attribute for example [data-them=’dark’] swap the
+            values in the correct place. Finally with JavaScript switch the
+            values with a event listener.
+          </p>
         </article>
         <article>
           <h3>Responsive Design</h3>
-          <p></p>
+          <p>
+            While you can not use the custom variable var function directly in
+            media queries. You can change the previously declared variable
+            whether globally or locally scoped in media queries. To do this you
+            make your media query then use the selector that your variable is in
+            for example root or a paragraph. Then re-use the same variable that
+            you used in that selector outside of the media query and change its
+            value.
+          </p>
+          <img
+            src="images/media-query.png"
+            alt="A code snippet showing an example of using variables in media queries"
+          />
+        </article>
+        <article>
+          <h3>JavaScript</h3>
+          <p>
+            With custom properties you can put anything you want in them but CSS
+            will not necessarily understand it. Which is where JavaScript can
+            come in and be used. For example I could put in --player-lost: if (
+            playerLife === 0) this.color = red; while whether or not this is a
+            good idea is debatable but it can be done. For a more real world use
+            case look at Andy Bell`s blog post about getting a CSS custom
+            property value with JavaScript:
+          </p>
+          <p>
+            Get a CSS Custom Property value with JavaScript by Andy Bell
+            <a
+              href="https://piccalil.li/blog/get-css-custom-property-value-with-javascript/"
+              >Piccalilli</a
+            >
+          </p>
         </article>
       </section>
       <section id="references">
@@ -233,7 +263,6 @@
             >MDN Web Docs</a
           >
         </p>
-
         <p>
           A Strategy Guide To CSS Custom Properties by Michael Riethmuller
           <a
@@ -241,14 +270,18 @@
             >Smashing Magazine</a
           >
         </p>
-        <h3>Further Reading</h3>
         <p>
-          Get a CSS Custom Property value wit JavaScript by Andy Bell
+          Get a CSS Custom Property value with JavaScript by Andy Bell
           <a
             href="https://piccalil.li/blog/get-css-custom-property-value-with-javascript/"
             >Piccalilli</a
           >
         </p>
+        <p>
+          W3C Documentation CSS Custom Properties for Cascading Variables
+          <a href="https://www.w3.org/TR/css-variables-1/">W3C</a>
+        </p>
+        <h3>Further Reading</h3>
         <p>
           CSS Custom Properties In The Cascade by Miriam Suzanne
           <a

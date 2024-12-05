@@ -513,7 +513,7 @@ nav a:focus {
 }
 
 img {
-  max-width: 35rem;
+  max-width: 100%;
 }
 
 section {
