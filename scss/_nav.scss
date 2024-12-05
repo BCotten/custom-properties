@@ -1,1 +1,47 @@
-@use "variables";
+@use "variables" as *;
+@use "mixins" as *;
+
+nav {
+  @include flex-row-wrap;
+  @include wrapper;
+  @include margin-center;
+  padding-inline: var(--space-s);
+  justify-content: space-between;
+  align-items: center;
+  max-width: 42rem;
+
+  img {
+    max-width: 6.25rem;
+  }
+
+  ul {
+    @include flex-row-wrap;
+    gap: var(--space-m);
+    padding-inline: 0;
+    font-weight: var(--fw-m);
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--clr-text);
+    background-color: var(--clr-primary);
+    padding: var(--space-2xs);
+    border-radius: 0.35rem;
+  }
+
+  a:hover,
+  a:focus {
+    background-color: var(--clr-secondary);
+  }
+
+}
+
+@media (min-width: 64em) {
+  nav {
+    max-width: 60rem;
+  }
+}

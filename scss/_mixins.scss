@@ -1,0 +1,16 @@
+@use "variables" as *;
+
+@mixin margin-center {
+  margin: 0 auto 0 auto;
+}
+
+@mixin flex-row-wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+@mixin wrapper {
+  max-width: 100rem;
+}
+

@@ -1,0 +1,7 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.picture {
+  @include margin-center;
+  max-width: fit-content;
+}

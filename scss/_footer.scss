@@ -1,0 +1,17 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+footer {
+  @include wrapper;
+  @include margin-center;
+  max-width: 42rem;
+  padding-top: var(--space-2xl);
+}
+
+@media (min-width: 64em) {
+  footer {
+    max-width: 60rem;
+  }
+}
+
+
