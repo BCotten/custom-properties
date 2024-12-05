@@ -12,6 +12,18 @@ img {
 section {
   @include margin-center;
   max-width: 42rem;
+
+  a {
+    text-decoration: none;
+    color: var(--clr-primary-dark);
+    border-bottom: 0.25rem solid var(--clr-accent);
+  }
+
+  a:hover,
+  a:focus {
+    border-bottom: 0.55rem solid var(--clr-secondary);
+    font-weight: 900  ;
+  }
 }
 
 @media (min-width: 64em) {

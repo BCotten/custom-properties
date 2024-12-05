@@ -37,10 +37,10 @@
     <main id="site-main">
       <section class="hero">
         <h1>CSS Custom Properties</h1>
-        <h3>
+        <p class="h3">
           A powerful easy to use tool to change your CSS workflow for the
           better.
-        </h3>
+        </p>
         <!-- /* spell-checker: disable */ -->
         <div class="picture">
           <picture>
@@ -164,10 +164,18 @@
             increases the speed to make changes. Since developers won’t have to
             look through a large code base to find what they are looking for.
           </p>
+          <!-- /* spell-checker: disable */ -->
           <img
-            src="images/Colors.png"
+            sizes="(max-width: 1258px) 100vw, 1258px"
+            srcset="
+              images/colors-example_jvugf4_c_scale,w_200.png   200w,
+              images/colors-example_jvugf4_c_scale,w_671.png   671w,
+              images/colors-example_jvugf4_c_scale,w_1258.png 1258w
+            "
+            src="images/colors-example_jvugf4_c_scale,w_1258.png"
             alt="code of custom properties in the root and body of the code file"
           />
+          <!-- /* spell-checker: enable */ -->
         </article>
         <article>
           <h3>Readability</h3>
@@ -213,7 +221,7 @@
         <article>
           <h3>Responsive Design</h3>
           <p>
-            While you can not use the custom variable var function directly in
+            While you can not use the custom variable var() function directly in
             media queries. You can change the previously declared variable
             whether globally or locally scoped in media queries. To do this you
             make your media query then use the selector that your variable is in

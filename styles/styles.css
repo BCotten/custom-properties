@@ -401,6 +401,7 @@ video {
   --clr-text: #040a0e;
   --clr-background: #f2f8fb;
   --clr-primary: #439cc7;
+  --clr-primary-dark: #007aa3;
   --clr-secondary: #c995df;
   --clr-accent: #d573ce;
 }
@@ -416,7 +417,7 @@ body {
 h1,
 h2,
 h3,
-h4,
+.h3 h4,
 h5,
 h6 {
   font-family: var(--ff-secondary);
@@ -432,7 +433,8 @@ h2 {
   font-size: var(--fs-2xl);
 }
 
-h3 {
+h3,
+.h3 {
   font-size: var(--fs-extra-large);
 }
 
@@ -519,6 +521,16 @@ img {
 section {
   margin: 0 auto 0 auto;
   max-width: 42rem;
+}
+section a {
+  text-decoration: none;
+  color: var(--clr-primary-dark);
+  border-bottom: 0.25rem solid var(--clr-accent);
+}
+section a:hover,
+section a:focus {
+  border-bottom: 0.55rem solid var(--clr-secondary);
+  font-weight: 900;
 }
 
 @media (min-width: 64em) {
